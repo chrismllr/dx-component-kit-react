@@ -1,3 +1,5 @@
-const AsyncButton = require('./components/AsyncButton');
+import AsyncButton from './components/AsyncButton/AsyncButton';
 
-export { AsyncButton };
+export default {
+  AsyncButton
+};
