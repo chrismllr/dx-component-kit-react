@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { noop } from '../../../utils/js-utils';
+import { noop } from '../../utils/js-utils';
 
 export const AsyncButton = ({
   isPending = false,
