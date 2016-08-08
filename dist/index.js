@@ -16,6 +16,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
+  exports.AsyncButton = undefined;
 
   var _AsyncButton2 = _interopRequireDefault(_AsyncButton);
 
@@ -25,7 +26,5 @@
     };
   }
 
-  exports.default = {
-    AsyncButton: _AsyncButton2.default
-  };
+  exports.AsyncButton = _AsyncButton2.default;
 });

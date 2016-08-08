@@ -1,5 +1,5 @@
 import AsyncButton from './components/AsyncButton/AsyncButton';
 
-export default {
+export {
   AsyncButton
 };
