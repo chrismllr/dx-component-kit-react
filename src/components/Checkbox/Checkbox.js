@@ -1,7 +1,11 @@
 import React, { PropTypes } from 'react';
 import condClass from '../../utils/conditional-class';
-
-import '../../index.css';
+import {
+  CheckboxInput,
+  CheckboxLabel,
+  CheckboxBox,
+  CheckboxBoxChecked
+} from './Checkbox.scss';
 
 export const Checkbox = (props) => {
   const checkboxChange = (event) =>
@@ -16,8 +20,8 @@ export const Checkbox = (props) => {
   };
 
   return (
-    <label className={`${props.className} Checkbox__label`} htmlFor={props.recordField}>
-      <input className='Checkbox__input'
+    <label className={`${props.className} ${CheckboxLabel}`} htmlFor={props.recordField}>
+      <input className={CheckboxInput}
         type='checkbox'
         id={props.recordField}
         value={props.value}
@@ -25,7 +29,7 @@ export const Checkbox = (props) => {
         checked={isChecked()}
       />
 
-      <span className={`Checkbox__box ${condClass(isChecked(), 'Checkbox__boxChecked')}`}>
+      <span className={`${CheckboxBox} ${condClass(isChecked(), CheckboxBoxChecked)}`}>
         <i className='material-icons'>check</i>
       </span>
 

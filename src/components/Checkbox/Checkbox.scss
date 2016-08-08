@@ -1,4 +1,8 @@
-.Checkbox__label {
+@import 'node_modules/@dialexa/style-kit/style-kit/base/type';
+@import 'node_modules/@dialexa/style-kit/style-kit/base/colors';
+@import 'node_modules/@dialexa/style-kit/style-kit/tools/mixins';
+
+.CheckboxLabel {
   @include display-flex(row, center, center);
   font-size: font-size(body);
   font-weight: font-weight(medium);
@@ -22,7 +26,7 @@
   }
 }
 
-.Checkbox__box {
+.CheckboxBox {
   height: 16px;
   width: 16px;
   min-width: 16px;
@@ -43,7 +47,7 @@
   }
 }
 
-.Checkbox__boxChecked {
+.CheckboxBoxChecked {
   background-color: $blue;
 
   i {
