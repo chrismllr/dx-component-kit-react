@@ -1,5 +1,14 @@
-var jsdom = require('jsdom').jsdom;
+// ---------------------------------------
+// Test Environment Setup
+// ---------------------------------------
 
+var sinon = require('sinon');
+var chai = require('chai');
+var sinonChai = require('sinon-chai');
+var chaiAsPromised = require('chai-as-promised');
+var chaiEnzyme = require('chai-enzyme');
+
+var jsdom = require('jsdom').jsdom;
 var exposedProperties = ['window', 'navigator', 'document'];
 
 global.document = jsdom('');
@@ -16,6 +25,15 @@ global.navigator = {
 };
 
 documentRef = document;
+
+chai.use(sinonChai);
+chai.use(chaiAsPromised);
+chai.use(chaiEnzyme());
+
+global.chai = chai;
+global.sinon = sinon;
+global.expect = chai.expect;
+global.should = chai.should();
 
 require('babel-core/register');
 require('babel-polyfill');

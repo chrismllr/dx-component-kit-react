@@ -1,9 +1,11 @@
 import React from 'react';
-import AsyncButton from 'components/AsyncButton';
+import AsyncButton from '../../../components/AsyncButton';
 import { mount } from 'enzyme';
 
 describe('(Component) AsyncButton', () => {
-  let _props, _spies, _wrapper;
+  let _props;
+  let _spies;
+  let _wrapper;
 
   beforeEach(() => {
     _spies = {};
@@ -15,7 +17,7 @@ describe('(Component) AsyncButton', () => {
       btnAction: (_spies.btnAction = sinon.spy()),
       btnAttrs: { form: 'account-form' }
     };
-    _wrapper =  mount(<AsyncButton { ..._props } />);
+    _wrapper = mount(<AsyncButton { ..._props } />);
   });
 
   it('Should initialize with default btn text and btn class', () => {
