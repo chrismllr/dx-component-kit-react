@@ -1,13 +1,13 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'react', '../../../utils/js-utils', 'app.css'], factory);
+    define(['exports', 'react', '../../../utils/js-utils'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('../../../utils/js-utils'), require('app.css'));
+    factory(exports, require('react'), require('../../../utils/js-utils'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react, global.jsUtils, global.app);
+    factory(mod.exports, global.react, global.jsUtils);
     global.AsyncButton = mod.exports;
   }
 })(this, function (exports, _react, _jsUtils) {

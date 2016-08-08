@@ -1,3 +1,3 @@
-const AsyncButton = './lib/AsyncButton/';
+const AsyncButton = require('./components/AsyncButton');
 
 export { AsyncButton };
