@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'react', '../../../utils/js-utils', '../../styles/app.scss'], factory);
+    define(['exports', 'react', '../../../utils/js-utils', 'app.css'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('../../../utils/js-utils'), require('../../styles/app.scss'));
+    factory(exports, require('react'), require('../../../utils/js-utils'), require('app.css'));
   } else {
     var mod = {
       exports: {}
