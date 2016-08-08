@@ -1,20 +1,21 @@
 {
-    "name": "react-npm-boilerplate",
+    "name": "dx-component-kit-react",
     "version": "1.0.0",
-    "description": "Boilerplate for creating React Npm packages with ES2015",
+    "description": "Dialexa component kit for React",
     "repository": {
         "type": "git",
         "url": "https://github.com/juliancwirko/react-npm-boilerplate.git"
     },
-    "author": "Julian Ćwirko",
-    "license": "MIT",
+    "author": "Chris Miller",
+    "license": "ISC",
     "bugs": {
         "url": "https://github.com/juliancwirko/react-npm-boilerplate/issues"
     },
     "homepage": "https://github.com/juliancwirko/react-npm-boilerplate",
     "keywords": [
         "react-component",
-        "react"
+        "react",
+        "dialexa"
     ],
     "options": {
         "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
@@ -47,7 +48,10 @@
         "react-addons-test-utils": "^15.0.0",
         "react": "^15.0.0",
         "react-dom": "^15.0.0",
-        "sinon": "^1.17.3"
+        "chai-as-promised": "^5.1.0",
+        "chai-enzyme": "^0.4.0",
+        "sinon": "2.0.0-pre",
+        "sinon-chai": "^2.8.0"
     },
     "peerDependencies": {
         "react": "~0.14.8 || ^15.0.0",

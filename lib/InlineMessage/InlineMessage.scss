@@ -1,0 +1,66 @@
+@import '~styles/base/type';
+@import '~styles/base/colors';
+@import '~styles/tools/animations';
+@import '~styles/tools/mixins';
+
+%notification {
+  padding: 0.75rem;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  border-radius: 3px;
+  text-align: left;
+  padding-right: 2rem;
+  font-size: font-size(body);
+  font-weight: font-weight(medium);
+}
+
+.notification {
+  @extend %notification;
+
+  animation: fadeInDown .4s;
+  animation-fill-mode: both;
+}
+
+.messageList {
+  padding: 0;
+  margin: 0;
+  min-height: 1.5em;
+}
+
+.messageItem {
+  list-style: none;
+  margin-bottom: 1em;
+
+  &:last-child,
+  &:only-child {
+    margin-bottom: 0;
+  }
+}
+
+.closeMessage {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 2.5rem;
+
+  i {
+    font-size: font-size(body);
+    @include center(h);
+    top: 1rem;
+  }
+}
+
+@each $theme, $color in $ui-colors {
+  .notification--#{$theme} {
+    border: 1px solid $color;
+    background: lighten($color, 35%);
+    color: darken($color, 10%);
+
+    i {
+      color: darken($color, 10%);
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '~styles/base/colors';
+@import '~styles/base/type';
+@import '~styles/tools/mixins';
+
+.label {
+  @include display-flex(row, center, center);
+  font-size: font-size(body);
+  font-weight: font-weight(medium);
+  color: palette(onetech, body-blue);
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: .66rem;
+  text-align: left;
+}
+
+.input {
+  opacity: 0;
+  margin: 0;
+  position: absolute;
+
+  &:focus {
+    & + .box {
+      border-color: #2D9BE3;
+      box-shadow: rgba(#2D9BE3, .4) 0 0 0 2px;
+    }
+  }
+}
+
+.box {
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-right: .4rem;
+
+  font-size: .9rem;
+  border-radius: 3px;
+  border: 1px solid palette(onetech, action);
+  color: $white;
+
+  @include pop;
+
+  i {
+    display: none;
+  }
+}
+
+.boxChecked {
+  background-color: palette(onetech, action);
+
+  i {
+    @include center;
+    color: $white;
+    display: block;
+    z-index: 100;
+    font-size: font-size(body);
+  }
+}

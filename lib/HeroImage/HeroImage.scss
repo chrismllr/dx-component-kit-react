@@ -1,0 +1,25 @@
+@import '~styles/tools/mixins';
+
+.heroImage {
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  //border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  background-repeat: no-repeat;
+
+  &--bg {
+    &:before {
+      @include s-overlay(black, .45);
+    }
+  }
+
+  &--contain {
+    background-size: contain;
+  }
+
+  &__title {
+    color: #fff;
+  }
+}

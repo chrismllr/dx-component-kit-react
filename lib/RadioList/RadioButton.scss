@@ -1,0 +1,40 @@
+@import '~styles/tools/mixins';
+@import '~styles/base/colors';
+@import '~styles/base/type';
+
+.radioBtn {
+  @include display-flex(row, flex-start);
+  font-size: font-size(body, large);
+  color: palette(onetech, body-blue);
+
+  &:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  &__list {
+    text-align: left;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    padding-left: 1.875rem;
+    line-height: line-height();
+  }
+
+  &__circle {
+    display: inline-block;
+    color: palette(gray);
+    border-radius: 100%;
+    @include pop;
+
+    &.checked {
+      color: palette(onetech, action);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import '~styles/tools/mixins';
+@import '~styles/base/type';
+@import '~styles/tools/animations';
+
+.loader {
+  position: relative;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+
+  svg {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.loaderText {
+  @include center();
+  font-size: font-size(body, x-small);
+  color: palette(onetech, action);
+  font-weight: font-weight(medium);
+}
+
+.loaderContainer {
+  width: 100%;
+}
+
+.animateSpinner {
+  animation: fadeInDown .4s ease-in;
+  animation-fill-mode: both;
+}
+
+.animateContent {
+  animation: fadeIn .4s ease-in;
+  animation-fill-mode: both;
+}
