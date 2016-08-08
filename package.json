@@ -1,6 +1,6 @@
 {
   "name": "dx-component-kit-react",
-  "version": "1.0.7",
+  "version": "1.0.6",
   "description": "Dialexa component kit for React",
   "repository": {
     "type": "git",
@@ -21,8 +21,10 @@
     "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
   },
   "scripts": {
-    "prepublish": "npm run js:build",
+    "prepublish": "npm run js:build && npm run css:build && npm run css:prefix",
     "js:build": "babel --plugins 'transform-es2015-modules-umd' src --ignore __tests__ --out-dir ./dist",
+    "css:build": "node-sass --output-style=compact --include-path src/styles/ src/styles/index.scss dist/dx-component-kit-react.css",
+    "css:prefix": "postcss --use autoprefixer -b 'last 2 versions' dist/*.css -d dist/",
     "lint": "eslint ./src",
     "lintfix": "eslint ./src --fix",
     "testonly": "mocha $npm_package_options_mocha",

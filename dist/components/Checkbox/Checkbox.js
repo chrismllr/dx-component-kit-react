@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'react', '../../utils/conditional-class', './Checkbox.scss'], factory);
+    define(['exports', 'react', '../../utils/conditional-class'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('../../utils/conditional-class'), require('./Checkbox.scss'));
+    factory(exports, require('react'), require('../../utils/conditional-class'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react, global.conditionalClass, global.Checkbox);
+    factory(mod.exports, global.react, global.conditionalClass);
     global.Checkbox = mod.exports;
   }
-})(this, function (exports, _react, _conditionalClass, _Checkbox) {
+})(this, function (exports, _react, _conditionalClass) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -43,8 +43,8 @@
 
     return _react2.default.createElement(
       'label',
-      { className: props.className + ' ' + _Checkbox.CheckboxLabel, htmlFor: props.recordField },
-      _react2.default.createElement('input', { className: _Checkbox.CheckboxInput,
+      { className: props.className + ' Checkbox__label', htmlFor: props.recordField },
+      _react2.default.createElement('input', { className: 'Checkbox__input',
         type: 'checkbox',
         id: props.recordField,
         value: props.value,
@@ -53,7 +53,7 @@
       }),
       _react2.default.createElement(
         'span',
-        { className: _Checkbox.CheckboxBox + ' ' + (0, _conditionalClass2.default)(isChecked(), _Checkbox.CheckboxBoxChecked) },
+        { className: 'Checkbox__box ' + (0, _conditionalClass2.default)(isChecked(), 'Checkbox__boxChecked') },
         _react2.default.createElement(
           'i',
           { className: 'material-icons' },
