@@ -1801,16 +1801,24 @@ body { line-height: 1.4; -webkit-transition: -webkit-transform 0.5s cubic-bezier
 
 .container { position: relative; max-width: 65em; margin: 0 auto; padding: 0 1.5em; }
 
-.Checkbox__label { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; font-size: 1rem; font-weight: 500; color: #686e71; position: relative; margin: 0 auto; margin-bottom: .66rem; text-align: left; }
+.Checkbox__label { display: inline-block; font-size: 1rem; font-weight: 500; color: #686e71; position: relative; margin: 0 auto; margin-bottom: .66rem; text-align: left; }
 
-.Checkbox__input { opacity: 0; margin: 0; position: absolute; }
+.Checkbox__input { opacity: 0; margin: 0 !important; position: absolute; }
 
 .Checkbox__input:focus + .box { border-color: #2D9BE3; box-shadow: rgba(45, 155, 227, 0.4) 0 0 0 2px; }
 
-.Checkbox__box { height: 16px; width: 16px; min-width: 16px; display: block; position: relative; cursor: pointer; margin-right: .4rem; font-size: .9rem; border-radius: 3px; border: 1px solid #353637; color: #FFF; -webkit-transition: all 0.3s cubic-bezier(0.3, 0, 0, 1.15); transition: all 0.3s cubic-bezier(0.3, 0, 0, 1.15); }
+.Checkbox__box { position: relative; height: 16px; width: 16px; display: inline-block; vertical-align: text-top; cursor: pointer; margin-right: .4rem; font-size: 1rem; border-radius: 3px; border: 1px solid #353637; color: #FFF; -webkit-transition: all 0.3s cubic-bezier(0.3, 0, 0, 1.15); transition: all 0.3s cubic-bezier(0.3, 0, 0, 1.15); }
 
 .Checkbox__box i { display: none; }
 
 .Checkbox__boxChecked { background-color: #0066FF; }
 
 .Checkbox__boxChecked i { position: absolute; top: 50%; left: 50%; -webkit-transform: scale(1) translate3d(-50%, -50%, 0); transform: scale(1) translate3d(-50%, -50%, 0); color: #FFF; display: block; z-index: 100; font-size: 1rem; }
+
+.Dropdown { position: relative; border-radius: 5px; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.Dropdown__select { width: 70%; -moz-appearance: none; text-overflow: ellipsis; padding-right: 26px !important; }
+
+.Dropdown__select:focus { box-shadow: rgba(45, 155, 227, 0.4) 0 0 0 2px; border-color: #2D9BE3; border-left-color: #2D9BE3; }
+
+.Dropdown i { position: absolute; top: 52%; -webkit-transform: translateY(-50%); transform: translateY(-50%); font-size: 2rem; pointer-events: none; right: 0.25rem; }

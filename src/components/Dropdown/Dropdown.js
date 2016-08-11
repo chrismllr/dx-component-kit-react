@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 
 export const Dropdown = ({
-  label,
   selectedValue,
   recordField,
   options = [],
+  className,
   onChange,
   placeholder,
   dropdownAttrs = {}
@@ -13,7 +13,7 @@ export const Dropdown = ({
     onChange(recordField, event.target.value);
 
   return (
-    <div className='Dropdown'>
+    <div className={`Dropdown ${className}`}>
       <select
         className='Dropdown__select'
         id={recordField}
@@ -21,7 +21,7 @@ export const Dropdown = ({
         onChange={dropdownChange}
         {...dropdownAttrs}
       >
-        <option value=''>{placeholder || label}</option>
+        <option value=''>{placeholder || 'Select an option'}</option>
         {options.map((option, i) =>
           <option key={i} value={option}>{option}</option>
         )}
@@ -32,7 +32,6 @@ export const Dropdown = ({
 };
 
 Dropdown.propTypes = {
-  label: PropTypes.string,
   recordField: PropTypes.string,
   selectedValue: PropTypes.any,
   onChange: PropTypes.func,
