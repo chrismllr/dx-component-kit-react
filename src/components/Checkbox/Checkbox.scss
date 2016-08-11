@@ -1,5 +1,5 @@
 .Checkbox__label {
-  @include display-flex(row, center, center);
+  display: inline-block;
   font-size: font-size(body);
   font-weight: font-weight(medium);
   color: palette(gray, xx-dark);
@@ -11,7 +11,7 @@
 
 .Checkbox__input {
   opacity: 0;
-  margin: 0;
+  margin: 0 !important;
   position: absolute;
 
   &:focus {
@@ -23,15 +23,15 @@
 }
 
 .Checkbox__box {
+  position: relative;
   height: 16px;
   width: 16px;
-  min-width: 16px;
-  display: block;
-  position: relative;
+  display: inline-block;
+  vertical-align: text-top;
   cursor: pointer;
   margin-right: .4rem;
 
-  font-size: .9rem;
+  font-size: 1rem;
   border-radius: 3px;
   border: 1px solid palette(gray, x-dark);
   color: $white;
