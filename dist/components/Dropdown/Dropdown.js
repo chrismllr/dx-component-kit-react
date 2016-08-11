@@ -41,11 +41,11 @@
   };
 
   var Dropdown = exports.Dropdown = function Dropdown(_ref) {
-    var label = _ref.label;
     var selectedValue = _ref.selectedValue;
     var recordField = _ref.recordField;
     var _ref$options = _ref.options;
     var options = _ref$options === undefined ? [] : _ref$options;
+    var className = _ref.className;
     var onChange = _ref.onChange;
     var placeholder = _ref.placeholder;
     var _ref$dropdownAttrs = _ref.dropdownAttrs;
@@ -57,7 +57,7 @@
 
     return _react2.default.createElement(
       'div',
-      { className: 'Dropdown' },
+      { className: 'Dropdown ' + className },
       _react2.default.createElement(
         'select',
         _extends({
@@ -69,7 +69,7 @@
         _react2.default.createElement(
           'option',
           { value: '' },
-          placeholder || label
+          placeholder || 'Select an option'
         ),
         options.map(function (option, i) {
           return _react2.default.createElement(
@@ -88,7 +88,6 @@
   };
 
   Dropdown.propTypes = {
-    label: _react.PropTypes.string,
     recordField: _react.PropTypes.string,
     selectedValue: _react.PropTypes.any,
     onChange: _react.PropTypes.func,
