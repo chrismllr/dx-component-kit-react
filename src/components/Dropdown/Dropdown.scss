@@ -1,0 +1,30 @@
+$inputRadius: 5px;
+$focusColor: #2D9BE3;
+
+.Dropdown {
+  position: relative;
+  border-radius: $inputRadius;
+  display: flex;
+
+  &__select {
+    width: 70%;
+    -moz-appearance: none;
+    text-overflow: ellipsis;
+    padding-right: 26px !important;
+
+    &:focus {
+      box-shadow: rgba($focusColor, .4) 0 0 0 2px;
+      border-color: $focusColor;
+      border-left-color: $focusColor;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    pointer-events: none;
+    right: 0.25rem;
+  }
+}
