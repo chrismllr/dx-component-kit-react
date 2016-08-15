@@ -10,6 +10,7 @@ $focusColor: #2D9BE3;
     margin-bottom: 0;
     -moz-appearance: none;
     text-overflow: ellipsis;
+    max-width: inherit;
     padding-right: 26px !important;
 
     &:focus {
