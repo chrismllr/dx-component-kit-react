@@ -1,8 +1,13 @@
+$blue: #2D9BE3;
+$white: #fff;
+$darkGray: #919191;
+$xDarkGray: #4a4a4a;
+
 .Checkbox__label {
   display: inline-block;
   font-size: 1rem;
   font-weight: 300;
-  color: #4a4a4a;
+  color: $xDarkGray;
   position: relative;
   margin: 0 auto;
   margin-bottom: .66rem;
@@ -16,27 +21,27 @@
 
   &:focus {
     & + .box {
-      border-color: #2D9BE3;
-      box-shadow: rgba(#2D9BE3, .4) 0 0 0 2px;
+      border-color: $blue;
+      box-shadow: rgba($blue, .4) 0 0 0 2px;
     }
   }
 }
 
 .Checkbox__box {
   position: relative;
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   display: inline-block;
-  vertical-align: text-top;
+  vertical-align: text-bottom;
   cursor: pointer;
   margin-right: .4rem;
 
   font-size: 1rem;
   border-radius: 3px;
-  border: 1px solid #919191;
-  color: #fff;
+  border: 1px solid $darkGray;
+  color: $white;
 
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
 
   i {
     display: none;
@@ -44,13 +49,15 @@
 }
 
 .Checkbox__boxChecked {
-  background-color: #14282D;
+  background-color: $blue;
+  border-color: $blue;
 
   i {
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
-    color: #fff;
+    color: $white;
     display: block;
     z-index: 100;
     font-size: 1rem;
