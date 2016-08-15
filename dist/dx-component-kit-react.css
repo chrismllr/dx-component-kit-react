@@ -336,11 +336,20 @@ menu, ol, ul { padding: 0 0 0 2em; }
 
 .Dropdown i { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); font-size: 2rem; pointer-events: none; right: 0.25rem; }
 
-.flashMessage { position: fixed; text-align: left; top: 1rem; right: 1rem; border-radius: 3px; padding: .7rem 1rem; font-size: 1rem; max-width: 320px; z-index: 99999; background-color: #FFF; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-right: 3rem; box-shadow: rgba(0, 0, 0, 0.25) 0 2px 3px 0; -webkit-animation: fadeInRight .4s ease; animation: fadeInRight .4s ease; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-transition: 500ms ease; transition: 500ms ease; }
+@keyframes slideInRightShort { 0% { -webkit-transform: translate3d(10%, 0, 0); transform: translate3d(10%, 0, 0); }
+  100% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes slideInDownShort { 0% { -webkit-transform: translate3d(0, -10%, 0); transform: translate3d(0, -10%, 0); }
+  100% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInDownShort { 0% { -webkit-transform: translate3d(0, -10%, 0); transform: translate3d(0, -10%, 0); }
+  100% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } }
+
+.flashMessage { position: fixed; text-align: left; top: 1rem; right: 1rem; border-radius: 3px; padding: .7rem 1rem; font-size: 1rem; max-width: 320px; z-index: 99999; background-color: #FFF; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-right: 3rem; box-shadow: rgba(0, 0, 0, 0.25) 0 2px 3px 0; -webkit-animation: slideInRightShort .3s ease; animation: slideInRightShort .3s ease; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-transition: 500ms ease; transition: 500ms ease; }
 
 .flashMessage.exiting { opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); }
 
-@media only screen and (max-width: 480px) { .flashMessage { top: 0; left: 0; right: 0; width: 100%; max-width: inherit; -webkit-animation: fadeInDown .4s; animation: fadeInDown .4s; border-radius: 0; box-shadow: rgba(0, 0, 0, 0.25) 0 1px 1px 0; } }
+@media only screen and (max-width: 480px) { .flashMessage { top: 0; left: 0; right: 0; width: 100%; max-width: inherit; -webkit-animation: slideInDownShort .3s ease; animation: slideInDownShort .3s ease; border-radius: 0; box-shadow: rgba(0, 0, 0, 0.25) 0 1px 1px 0; } }
 
 .flashMessageIcon { height: 100%; margin-right: .75rem; display: inline-block; font-size: 2.25rem; }
 
