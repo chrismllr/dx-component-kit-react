@@ -92,7 +92,7 @@
     selectedValue: _react.PropTypes.any,
     onChange: _react.PropTypes.func,
     className: _react.PropTypes.string,
-    options: _react.PropTypes.string,
+    options: _react.PropTypes.arrayOf(_react.PropTypes.string),
     placeholder: _react.PropTypes.string,
     dropdownAttrs: _react.PropTypes.object
   };
