@@ -12,10 +12,10 @@
 
 .Checkbox__boxChecked i { left: 50%; top: 50%; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); color: #fff; display: block; z-index: 100; font-size: 1rem; }
 
-.Dropdown { position: relative; border-radius: 5px; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.Dropdown { position: relative; border-radius: 5px; }
 
-.Dropdown__select { width: 70%; -moz-appearance: none; text-overflow: ellipsis; padding-right: 26px !important; }
+.Dropdown__select { width: 100%; margin-bottom: 0; -moz-appearance: none; text-overflow: ellipsis; padding-right: 26px !important; }
 
 .Dropdown__select:focus { box-shadow: rgba(45, 155, 227, 0.4) 0 0 0 2px; border-color: #2D9BE3; border-left-color: #2D9BE3; }
 
-.Dropdown i { position: absolute; top: 52%; -webkit-transform: translateY(-50%); transform: translateY(-50%); font-size: 2rem; pointer-events: none; right: 0.25rem; }
+.Dropdown i { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); font-size: 2rem; pointer-events: none; right: 0.25rem; }
