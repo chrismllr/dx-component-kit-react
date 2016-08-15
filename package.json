@@ -32,7 +32,8 @@
   },
   "pre-commit": {
     "run": [
-      "lint"
+      "lint",
+      "test"
     ]
   },
   "devDependencies": {
