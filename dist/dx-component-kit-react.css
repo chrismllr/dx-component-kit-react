@@ -14,7 +14,7 @@
 
 .Dropdown { position: relative; border-radius: 5px; }
 
-.Dropdown__select { width: 100%; margin-bottom: 0; -moz-appearance: none; text-overflow: ellipsis; padding-right: 26px !important; }
+.Dropdown__select { width: 100%; margin-bottom: 0; -moz-appearance: none; text-overflow: ellipsis; max-width: inherit; padding-right: 26px !important; }
 
 .Dropdown__select:focus { box-shadow: rgba(45, 155, 227, 0.4) 0 0 0 2px; border-color: #2D9BE3; border-left-color: #2D9BE3; }
 
