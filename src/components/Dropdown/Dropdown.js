@@ -36,7 +36,7 @@ Dropdown.propTypes = {
   selectedValue: PropTypes.any,
   onChange: PropTypes.func,
   className: PropTypes.string,
-  options: PropTypes.string,
+  options: PropTypes.arrayOf(PropTypes.string),
   placeholder: PropTypes.string,
   dropdownAttrs: PropTypes.object
 };

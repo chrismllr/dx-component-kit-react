@@ -1,2 +1,9 @@
-@import '../components/Checkbox/Checkbox.scss';
-@import '../components/Dropdown/Dropdown.scss';
+@import 'node_modules/@dialexa/style-kit/style-kit/base/media-queries';
+@import 'node_modules/@dialexa/style-kit/style-kit/base/colors';
+@import 'node_modules/@dialexa/style-kit/style-kit/base/type';
+@import 'node_modules/@dialexa/style-kit/style-kit/tools/animations';
+@import 'node_modules/@dialexa/style-kit/style-kit/tools/mixins';
+
+@import '../components/Checkbox/Checkbox';
+@import '../components/Dropdown/Dropdown';
+@import '../components/FlashMessage/FlashMessage';
