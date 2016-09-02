@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', './components/AsyncButton/AsyncButton', './components/Checkbox/Checkbox', './components/Dropdown/Dropdown', './components/FlashMessage/FlashMessage', './components/FlexGrid/FlexGrid', './components/GridItem/GridItem'], factory);
+    define(['exports', './components/AsyncButton/AsyncButton', './components/Checkbox/Checkbox', './components/Dropdown/Dropdown', './components/FlashMessage/FlashMessage', './components/FlexGrid/FlexGrid', './components/FlexGrid/GridItem'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('./components/AsyncButton/AsyncButton'), require('./components/Checkbox/Checkbox'), require('./components/Dropdown/Dropdown'), require('./components/FlashMessage/FlashMessage'), require('./components/FlexGrid/FlexGrid'), require('./components/GridItem/GridItem'));
+    factory(exports, require('./components/AsyncButton/AsyncButton'), require('./components/Checkbox/Checkbox'), require('./components/Dropdown/Dropdown'), require('./components/FlashMessage/FlashMessage'), require('./components/FlexGrid/FlexGrid'), require('./components/FlexGrid/GridItem'));
   } else {
     var mod = {
       exports: {}
