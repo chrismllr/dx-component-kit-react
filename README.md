@@ -13,6 +13,9 @@ Dropdown component
 ### [`Dx FlashMessage`](src/components/FlashMessage)
 Fixed-position messaging/ notification component
 
+### [`Dx FlexGrid`](src/components/FlexGrid)
+Flex-container / Grid component
+
 ## License
 
 ISC

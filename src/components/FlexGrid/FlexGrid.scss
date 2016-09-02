@@ -1,0 +1,30 @@
+.FlexGrid__grid {
+  @include display-flex(row, flex-start, center);
+  flex-wrap: wrap;
+}
+
+$gridItemWidths: (
+  small: 160px,
+  default: 240px,
+  large: 320px,
+  x-large: 400px
+);
+
+@each $width, $var in $gridItemWidths {
+  .FlexGrid__item--#{$width} {
+    max-width: $var;
+  }
+}
+
+$gridItemGutters: (
+  small: .5rem,
+  default: 1rem,
+  large: 1.25rem,
+  x-large: 2rem
+);
+
+@each $size, $var in $gridItemGutters {
+  .FlexGrid__item--gutter--#{$size} {
+    margin: $var;
+  }
+}
